@@ -75,7 +75,7 @@ function deleteBranches(branchesToDelete) {
   console.log(colors.green("All selected branches deleted."));
 }
 
-function promptDelRemote(branchName) {
+async function promptDelRemote(branchName) {
   // 询问是否删除对应的远程分支
   const command = `git push origin :${branchName}`;
   console.log(command);
