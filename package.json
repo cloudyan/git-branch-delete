@@ -1,5 +1,5 @@
 {
-  "name": "git-branch-delete",
+  "name": "@deepjs/git-branch-delete",
   "author": "Stefan Wille (https://www.stefanwille.com)",
   "version": "1.0.9",
   "main": "index.js",
