@@ -70,8 +70,17 @@ function deleteBranches(branchesToDelete) {
     console.log(command);
     const result = child_process.execSync(command, { encoding: "utf-8" });
     console.log(result);
+    promptDelRemote(branchName);
   }
   console.log(colors.green("All selected branches deleted."));
+}
+
+function promptDelRemote(branchName) {
+  // 询问是否删除对应的远程分支
+  const command = `git push origin :${branchName}`;
+  console.log(command);
+  const result = child_process.execSync(command, { encoding: "utf-8" });
+  console.log(result);
 }
 
 async function main() {
